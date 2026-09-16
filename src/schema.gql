@@ -1,0 +1,32 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Experience {
+  achievements: [String!]!
+  company: String!
+  id: ID!
+  period: String!
+  position: String!
+}
+
+type Profile {
+  experience: [Experience!]!
+  id: ID!
+  links: [String!]!
+  name: String!
+  projects: [Project!]!
+  skills: [String!]!
+  summary: String!
+  title: String!
+}
+
+type Project {
+  id: ID!
+  name: String!
+  url: String
+}
+
+type Query {
+  profile: Profile
+}
