@@ -17,7 +17,7 @@ import { PrismaClientExceptionFilter } from './common/filters/prisma-client-exce
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
-      autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
+      autoSchemaFile: process.env.VERCEL ? true : join(process.cwd(), 'src/schema.gql'),
       sortSchema: true,
       playground: false,
       plugins: [
