@@ -8,7 +8,8 @@
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:prod": "node dist/main",
-    "seed:build": "tsc prisma/seed.ts --outDir dist --module commonjs --esModuleInterop --target ES2021 --skipLibCheck"
+    "seed:build": "tsc prisma/seed.ts --outDir dist --module commonjs --esModuleInterop --target ES2021 --skipLibCheck",
+    "postinstall": "prisma generate"
   },
   "prisma": {
     "seed": "ts-node prisma/seed.ts"
