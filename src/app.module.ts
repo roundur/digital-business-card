@@ -25,6 +25,7 @@ import { PrismaClientExceptionFilter } from './common/filters/prisma-client-exce
         ApolloServerPluginCacheControl({ defaultMaxAge: 60 }),
         responseCachePlugin(),
       ],
+      introspection: true,
     }),
     PrismaModule,
     ProfileModule,
